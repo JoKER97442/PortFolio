@@ -1,0 +1,202 @@
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+}
+
+/* *****************************************************************
+GENERALITIES
+***************************************************************** */
+
+/* Le corps du document */
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-family: sans-serif;
+	color: #555;
+	background-color: #eee;
+}
+
+/* Le titre principal d'un flux */
+h1 {
+	font-size: 8rem;
+	color: #0B9ED9;
+}
+
+/* Le titre de second niveau  */
+h2 {
+	font-size: 3.2rem;
+	color: #333;
+}
+
+
+/* Le titre de troisème niveau */
+h3 {
+	font-size: 2.4rem;
+}
+
+/* Les liens */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Ajout d'un élément de décoration au survol */
+a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+/* Contenu principal */
+main {
+	padding: 5rem;
+}
+
+/* Les articles */
+article {
+	background-color: #fff;
+	padding: 1em;
+}
+
+section {
+    min-height: 800px;
+}
+/* marge entre les sections */
+section + section {
+	margin-top: 2em;
+}
+
+/* NAV */
+.header {
+    background-color: #CCD3D9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 15rem;
+}
+.header img {
+    max-width: 5rem;
+    margin-left: 1rem;
+}
+.header figure {
+    margin: 2rem;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav li {
+    text-align: center;
+    margin: 1rem;
+    background-color: #049DBF;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+nav li:hover {
+    background-color: #0B9ED9;
+}
+nav li > a {
+    padding: 2rem;
+
+}
+
+/* PRESENTATION */
+.container {
+    margin-left: 15rem;
+    background-color: #556573;
+}
+.presentation {
+    position: relative;
+    padding: 5rem;
+}
+h1 > span {
+    position: absolute;
+    left: 20rem;
+    top: 20rem;
+    font-size: 4rem;
+}
+.presentation p {
+    position: absolute;
+    left: 52rem;
+    top: 24rem;
+}
+.presentation h1:hover {
+    transition: all .3s ease-out;
+    color: #08fdd8;
+}
+/* Animation */
+
+
+/* CV */
+.cv {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cv article {
+    flex-basis: 40%;
+    margin: 5%;
+    padding: 2rem 5rem;
+    background-color: dimgrey;
+    border-radius: 2rem;
+}
+.footer {
+    margin-left: 15rem;
+    background-color: #BFA288;
+    padding: 5rem;
+    text-align: center;
+}
+/* GALERIE */
+
+.creation {
+    display: flex;
+    flex-wrap: wrap;
+}
+.creation img {
+    max-width: 100%;
+}
+.creation h2,
+.creation p {
+    flex-basis: 100%;
+    text-align: center;
+}
+.creation div {
+    flex-basis: 25%;
+}
+.creation figure {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+}
+.creation figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    border-radius: 100%;
+    margin: 50px;
+    height: 200px;
+}
+.creation figure:hover figcaption {
+    display: flex;
+}

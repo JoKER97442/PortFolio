@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Portfolio</title>  
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+        <figure>
+            <img src="./img/android-chrome-512x512.png" alt="logo joker">
+            <figcaption>developpeur web et jeux</figcaption>
+        </figure>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#presentation">Presentation</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#creation">Création</a></li>
+                <li><a href="https://github.com/JoKER97442">GIT</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="presentation" class="presentation">
+            <h1>jonathan kerbidi <span>developpeur web et jeux</span></h1>
+            <p>front-end / back-end</p>
+        </section>
+
+        <section id="cv" class="cv">
+            <article>
+                <h3>Reconvertion</h3>
+                <p>
+                    Après 4 ans à travailler dans le domaine Agricole,
+                    je me suis reconverti dans l'informatique.
+                    La developpement des sites web et des jeux videos
+                    sont se qui me passions à cette univers. 
+                </p>
+                <a href="#">Agricole</a>
+            </article>
+            <article>
+                <h3>Les jeux videos</h3>
+                <p>
+                    étant joueur depuis mon enfance, je n'imaginer pas avoir
+                    la possibilité de passer de l'autre coté de l'ecran et
+                    de faire de se je ma passion, mon métier.
+                </p>
+                <a href="#">Jeux video</a>
+            </article>
+            <article>
+                <h3>Les sites web</h3>
+                <p>
+                    La base de ma reconvertion, une formation "Aprendre à coder" ma ouvert la voie,
+                    et "le Concours qui Casse les Codes IX" pour approfondire dans le métier.
+                </p>
+                <a href="#">Formation</a>
+            </article>
+            <article>
+                <h3>Language</h3>
+                <p>
+                    web : HTML/CSS, JavaScript, PHP
+                    framework : Vue.JS, MySQL, Bootstrap, jQuery
+                    Logiciel : Visual Studio, Wamp, Git
+                    Jeux : Lua, JavaScript, GML
+                </p>
+                <a href="#">Language</a>
+            </article>
+        </section>
+
+        <section id="creation" class="creation">
+            <h2>Création</h2>
+            <p>mes réalisations et mes projets</p>
+            <div <?php foreach ($projets as $projet): ?>>
+                <?php if ($projet->name === 'Site_CV') { $projet->patch = 'https://jk-aac-ifr2021.go.yj.fr/Jonathan_CV/'; } ?>
+                <figure>
+                    <figcaption><?= '<a href="'.$projet->patch.'">'.$projet->name.'</a>' ?></figcaption>
+                    <img src="./img/<?= $projet->name ?>.png" alt="<?= $projet->name ?>">
+                </figure>
+            </div <?php endforeach?>>
+        </section>        
+    </main>
+
+    <footer class="footer">
+        <div id="contact" class="contact">
+            <h2>Contactez-moi</h2>
+            <address>
+                Jonathan Kerbidi,<br>
+                18 B rue commersons Basse-Vallée<br>
+                97442 St-Philippe, La Réunion<br>
+                <a href="tel:+262692596546">(+262) 0692 59 65 46</a><br>
+                <a href="mailto:jonathan.kerbidi96@gmail.com">jonathan.kerbidi96@gmail.com</a><br>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>
